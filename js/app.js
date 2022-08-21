@@ -3,7 +3,7 @@ document.getElementById('btn-canculate').addEventListener('click', function () {
     const incomeTotalString = incomeField.value;
     const incomeTotal = parseFloat(incomeTotalString);
 
-    incomeField.value = '';
+
 
 
     const foodField = document.getElementById('food-field');
@@ -38,4 +38,33 @@ document.getElementById('btn-canculate').addEventListener('click', function () {
 
 
     // console.log(totalExpense);
+})
+
+
+document.getElementById('btn-save').addEventListener('click', function () {
+    const saveField = document.getElementById('save-field');
+    const saveAmountString = saveField.value;
+    const saveAmount = parseFloat(saveAmountString);
+
+    saveField.value = '';
+
+    const incomeField = document.getElementById('income-field');
+    const incomeTotalString = incomeField.value;
+    const incomeTotal = parseFloat(incomeTotalString);
+
+    incomeField.value = '';
+
+
+    const save = ((saveAmount / 100) * incomeTotal);
+
+    const saveAmountTotal = document.getElementById('save-amount');
+    saveAmountTotal.innerText = save;
+
+
+    const remainingBalanceField = document.getElementById('remaining-balance');
+    const remainingBalance = balanceTotal - save;
+
+    remainingBalanceField.innerText = remainingBalance;
+
+
 })
