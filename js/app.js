@@ -60,7 +60,9 @@ document.getElementById('btn-save').addEventListener('click', function () {
     const saveAmountTotal = document.getElementById('save-amount');
     saveAmountTotal.innerText = save;
 
-
+    const balanceTotalField = document.getElementById('balance-total-field');
+    const balanceTotalString = balanceTotalField.innerText;
+    const balanceTotal = parseFloat(balanceTotalString);
     const remainingBalanceField = document.getElementById('remaining-balance');
     const remainingBalance = balanceTotal - save;
 
