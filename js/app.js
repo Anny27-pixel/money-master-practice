@@ -3,18 +3,23 @@ document.getElementById('btn-canculate').addEventListener('click', function () {
     const incomeTotalString = incomeField.value;
     const incomeTotal = parseFloat(incomeTotalString);
 
+    incomeField.value = '';
+
 
     const foodField = document.getElementById('food-field');
     const foodCostTotatString = foodField.value;
     const foodCostTotal = parseFloat(foodCostTotatString);
+    foodField.value = '';
 
     const rentField = document.getElementById('rent-field');
     const rentCostTotalString = rentField.value;
     const rentCostTotal = parseFloat(rentCostTotalString);
+    rentField.value = '';
 
     const clothesField = document.getElementById('clothes-filed');
     const clothesCostTotalString = clothesField.value;
     const clothesCostTotal = parseFloat(clothesCostTotalString);
+    clothesField.value = '';
 
 
     // console.log(incomeTotal, foodCostTotal, rentCostTotal, clothesCostTotal);
